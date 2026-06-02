@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        <h1>🎉 Quiz Completed</h1>
+
+        <h2>Your Score</h2>
+
+        <div class="score">
+            {{ score }}/3
+        </div>
+
+        {% if score == 3 %}
+            <p class="excellent">
+                Excellent! You have strong phishing awareness skills.
+            </p>
+
+        {% elif score >= 2 %}
+            <p class="good">
+                Good job! Keep learning to improve your cybersecurity knowledge.
+            </p>
+
+        {% else %}
+            <p class="warning">
+                You need more training. Review the phishing awareness section and try again.
+            </p>
+        {% endif %}
+
+        <div class="buttons">
+            <a href="/quiz" class="btn">Try Again</a>
+            <a href="/training" class="btn">Training Module</a>
+            <a href="/" class="btn">Home</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

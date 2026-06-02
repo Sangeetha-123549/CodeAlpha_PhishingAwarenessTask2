@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard AI - Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <h1>🛡️ Phishing Awareness Quiz</h1>
+
+    <form action="/result" method="POST">
+
+        <div class="question-card">
+            <h3>1. Which is a common sign of a phishing email?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                Official company logo
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                Urgent request for personal information
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                Proper grammar and verified sender
+            </label>
+        </div>
+
+        <div class="question-card">
+            <h3>2. Before clicking a link, what should you check?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                URL authenticity
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                Font size
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                Email color theme
+            </label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. What should you do with a suspicious email?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                Open all attachments
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                Forward passwords
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                Report and delete it
+            </label>
+        </div>
+
+        <button type="submit" class="btn">
+            Submit Quiz
+        </button>
+
+    </form>
+
+</div>
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</body>
+</html>
